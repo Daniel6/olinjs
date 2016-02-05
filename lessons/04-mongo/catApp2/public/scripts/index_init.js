@@ -47,6 +47,7 @@ function sortCatsByAge(a, b) {
 	}
 }
 
+// I like how you specify lower and upper bounds and stringify the body of your post req
 function fetchCats_AgeRange(min, max) {
 	console.log(Number(min) - 1);
 	$.ajax({
@@ -56,6 +57,7 @@ function fetchCats_AgeRange(min, max) {
 		data: JSON.stringify({"min": Number(min)-1, "max": Number(max)+1}), //Include the min and max numbers so that doing min=0, max=10 shows all cats as expected
 		success: function(res, status) {
 			var catlist = '<ul>';
+			// Cool use of $.each
 			$.each(res, function(index, cat) {
 				catlist += ''.concat(
 					'<li>',

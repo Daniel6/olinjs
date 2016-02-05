@@ -44,7 +44,10 @@ router.post('/bycolor', function(req, res) {
 	// 	res.json({error: "Undefined color"});
 	// }
 });
+
+// Love that. find({}), find() are equivalent for consistency.
 router.post('/killoldest', function(req, res) {
+	// Awesome. Nice use of mongo to sort by age.
 	Cat.find().sort({"age": -1}).limit(1).exec(function(err, cat) {
 		if (err) {
 			console.log(err);
