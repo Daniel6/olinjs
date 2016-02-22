@@ -5,6 +5,7 @@ var router = express.Router();
 var Ingredient = require('../public/models/models.js').ingredientsModel;
 
 //Create new ingredient or update existing one
+// tabs should be 4 wide
 router.post('/new', function(req, res) {
 	var newIngredient = new Ingredient(req.body);
 	Ingredient.find({name: req.body.name}, function(err, ingredients) {

@@ -42,6 +42,9 @@ function addIngredient(name, price) {
 
 //Take list of ingredients and generate html list of ingredients
 function genIngredientsList(ingredients) {
+        // There are probably more elegant ways to do this than writing out a bunch of html,
+        // The template cloning method can be more consise. I would look at the inclass exercise
+        // from the flex class to see an example that's true for a lot of these functions
 	var list = ''.concat(
 		'<table style="width: 100%">',
 		'<tr>',
