@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 var Models = require('./../../../models/models');
 var Twote = Models.twoteModel;
 var User = Models.userModel;
-
+//you should have expect statements. 
 describe('User Model', function() {
   it('should create a new user', function(done) {
     var user = new User({
