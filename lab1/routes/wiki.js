@@ -8,6 +8,7 @@ var pagedb = require('../public/models/models.js').pageModel;
 wiki.getpages = function(req, res){
 	var pagelist = [];
 	pagedb.find({}, function(err, pages) {
+        // you should probably remove these logs
 		console.log("Sent Pages");
 		var pages_nocontent = [];
 		for (i = 0; i < pages.length; i++) {

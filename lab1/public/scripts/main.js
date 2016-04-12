@@ -33,7 +33,7 @@ app.controller('mainController', function($scope, $sce, $http, $location){
 	};
 
 	// Request the server to create a new page
-	$scope.addPage = function(author) { 
+	$scope.addPage = function(author) {
 		if ($scope.newpageTitle == undefined || $scope.newpageContent == undefined) {
 			return;
 		}
@@ -67,6 +67,10 @@ app.controller('mainController', function($scope, $sce, $http, $location){
 			var content = res.data.content;
 
 			// Inject sanitized html
+            // This data needs to be sanitized and right now you are just telling angular to trust it as is
+            // To actually sanitize it look at https://docs.angularjs.org/api/ngSanitize/service/$sanitize
+            // The fact that I can add a script tag and it actually runs the script is a /HUGE/ vulerability (I did actually do this),
+            // look at the first answer here for more info: http://stackoverflow.com/questions/3129899/what-are-the-common-defenses-against-xss
 			$scope.pagecontent = $sce.trustAsHtml(content);
 
 			// Set app vars to keep track of what page we are on
