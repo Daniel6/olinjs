@@ -1,3 +1,4 @@
+// Good api documentation :D
 ##API routes and expected behaviors
 
 ###GET ./pages

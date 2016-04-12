@@ -1,4 +1,5 @@
 #!/bin/bash
+// you know that you can just use npm install right?
 if [[ $# -gt 0 ]]
   then
     infile=$1
