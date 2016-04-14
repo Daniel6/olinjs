@@ -19,7 +19,8 @@ app.get('/pages', wiki.getpages);
 app.get('/pages/byid/:id', wiki.getcontent);
 app.post('/pages/new', wiki.addpage);
 app.delete('/pages/byid/:id/delete', wiki.deletepage);
-
+// common practice is to send your angular app on anything that doesn't match above
+//app.get('*', functionThatSendsFile);
 
 
 var PORT = process.env.PORT || 3000;

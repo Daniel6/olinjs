@@ -10,7 +10,7 @@ function resetControls() {};
 app.config(function($routeProvider, $locationProvider){
 
   $routeProvider
-
+	// Nice choice to use routeProvider, but it would have been better to make each wiki page load a page template that is filled with the content.
 	.when("/",
 	{
 		templateUrl : '../views/wrapper.html',
